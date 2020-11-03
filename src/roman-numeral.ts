@@ -1,3 +1,3 @@
 export const romanNumeral = (input: number):string => {
-  return "I";
+  return "I".repeat(input);
 }
