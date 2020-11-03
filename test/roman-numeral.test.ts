@@ -1,4 +1,4 @@
-import { romanNumeral } from "../src/roman-numeral";
+import { romanFor } from "../src/roman-for";
 
 describe("RomanNumerals", () => {
   it.each([
@@ -6,10 +6,12 @@ describe("RomanNumerals", () => {
     [2, "II"],
     [3, "III"],
     [4, "IV"],
+    [5, "V"],
+    [6, "VI"]
   ])(
     "converts arabic number to roman numeral",
     (arabic, result) => {
-      expect(romanNumeral(arabic)).toEqual(result);
+      expect(romanFor(arabic)).toEqual(result);
     }
   );
 });
