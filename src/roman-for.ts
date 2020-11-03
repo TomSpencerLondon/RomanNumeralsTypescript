@@ -20,15 +20,16 @@ export const romanFor = (input: number):string => {
 }
 
 export const arabicFor = (roman: string): number => {
-  let result = romanNumerals[roman.charAt(roman.length - 1)]
+  let result = romanNumerals[roman.charAt(roman.length - 1)];
 
-  for (let i = roman.length - 2; i >= 0; i--){
-    let currentNumeral = romanNumerals[roman.charAt(i)]
-    if (currentNumeral < romanNumerals[roman.charAt(i + 1)]) {
+  for (let i = roman.length - 2; i >= 0; i--) {
+    let currentNumeral = romanNumerals[roman.charAt(i)];
+
+    if (currentNumeral < romanNumerals[roman.charAt(i + 1)]){
       result -= currentNumeral;
     }else {
       result += currentNumeral;
     }
   }
   return result;
-};
+}
